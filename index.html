@@ -1,0 +1,130 @@
+<!--카페 홈 메인 창-->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink Fit</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <!--<link rel="stylesheet" href="CSS/menu.css">-->
+
+    <!--구글 폰트, 아이콘 적용-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<script type="text/javascript" src="JS/index.js"></script>
+
+<body>
+    <!--페이지 헤더-->
+    <header>
+        <div id="top"></div>
+        <table>
+            <tr>
+                <td>
+                    <div class="title_area">
+                        <a href="index.html">
+                            <img alt="타이틀 이미지" src="DrinkFit_logo.png">
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu_area">
+                        <div class="sub_menu">
+                            <button class="sub_btn">MY페이지<i class="fa fa-caret-down"></i></button>
+                            <div class="sub_menu_list">
+                                <a href="#">회원 정보</a>
+                                <a href="#">내 음료</a>
+                                <a href="#">출석</a>
+                            </div>
+                        </div>
+                        <div class="sub_menu">
+                            <button class="sub_btn">커뮤니티<i class="fa fa-caret-down"></i></button>
+                            <div class="sub_menu_list">
+                                <a href="#">자유 게시판</a>
+                                <a href="#">추천 게시판</a>
+                                <a href="#">신고 게시판</a>
+                            </div>
+                        </div>
+                        <div class="sub_menu">
+                            <button class="sub_btn">음료 검색<i class="fa fa-caret-down"></i></button>
+                            <div class="sub_menu_list">
+                                <a href="#">맞춤 원두</a>
+                                <a href="#">맞춤 티</a>
+                            </div>
+                        </div>
+                        <div class="sub_menu">
+                            <button class="sub_btn">DRINK FIT 소개</button>
+                        </div>
+                    </div>
+                <td>
+                    <div class="login_area">
+                        <a href="join.html">회원가입</a>
+                        <a href="#" onclick="openLogin();">로그인</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <!--이미지 영역 : 배너 이미지-->
+    <div id="img_area">
+        <img id="banner" src="https://github.com/b7730yejin/imagesource/blob/main/coffee2.jpg?raw=true" alt="메인홈 배너">
+        <button class="change_img" onclick="goFront();"><span class="material-icons">&#xe5cb;</span></button>
+        <button class="change_img" onclick="goBack();"><span class="material-icons">&#xe5cc;</span></button>
+    </div>
+
+    <!--본문-->
+    <div id="main_contents">
+        <h2>6월의 인기 음료 <strong>TOP 3</strong></h2>
+        <div class="ranking_box">
+            <ul class="top_ranking">
+                <li>
+                    <img src="americano.jpg" alt="TOP3(1)" />
+                    <h3>아메리카노</h3>
+                    <p>맛있는 아메리카노</p>
+                </li>
+                <li>
+                    <img src="ratte.jpg" alt="TOP3(2)" />
+                    <h3>카페라테</h3>
+                    <p>부드러운 카페라테</p>
+                </li>
+                <li>
+                    <img src="caramel.jpg" alt="TOP3(3)" />
+                    <h3>카라멜마키아토</h3>
+                    <p>달콤한 카라멜마키아토</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer>
+        <hr>
+        <p class="copyBox">copyright &copy; 2021 BYJ</p>
+    </footer>
+
+    <div class="quick_area">
+        <ul class="quick_list">
+            <li><a href="javascript:;">
+                    <h3>공지사항</h3>
+                </a></li>
+            <li><a href="tel:010-3226-8183">
+                    <h3>전화 상담</h3>
+                </a></li>
+            <li><a href="javascript:;">
+                    <h3 class="to_contact">카카오톡 상담</h3>
+                </a></li>
+            <li><a href="#top">
+                    <h3>TOP</h3>
+                </a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,335 @@
+@charset "utf-8";
+@import url('layout_base.css');
+/*구글 폰트&아이콘*/
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap');
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+/*요소 초기화*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,button,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin:0; padding:0;
+}
+
+body {overflow-x: visible; }
+ /*헤더 영역*/
+header{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    display: grid;
+    min-width: 1120px;
+    background-color: rgba(0, 0, 0, 0.603);
+    z-index: 9999;
+}
+header table{
+    position: relative;
+    width: 100%;
+    
+}
+header table td:first-child{
+    width: 300px;
+}
+
+/*타이틀 이미지 설정*/
+.title_area img{
+    display: inline;
+    width: 250px;
+    height: 100%;
+    margin: 10px 0;
+    object-fit: contain;
+}
+.login_area {
+    height: 100px;
+}
+
+/*로그인&회원가입 하이퍼링크 설정*/
+.login_area a{
+    position: relative;
+    top: 0;
+    float:right;
+   /* font-family: 'Gamja Flower', cursive;*/
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 20px;
+    color: aliceblue;
+}
+.login_area a:last-child{
+    border-right: 2px solid aliceblue;
+}
+.login_area a:link{
+    color: aliceblue;
+}
+.login_area a:visited{
+    color: aliceblue;
+}
+.login_area a:hover{
+    color: rgb(192, 161, 136);
+}
+
+/*상단 메뉴 설정*/
+.menu_area {
+    overflow: hidden;
+    margin-top: 93px;
+    padding: 0 auto; 
+  }
+.menu_area a {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.sub_menu {
+    float: right;
+    overflow: hidden;
+}
+.sub_menu .sub_btn {
+    font-size: 18px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 25px;
+    background-color: inherit;
+    margin: 0 ;
+}
+.menu_area a:hover, .sub_menu:hover .sub_btn {
+    background-color: red;
+}
+.sub_menu_list {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: red;
+    width: 100%;
+    z-index: 1;
+}
+.sub_menu_list a {
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+.sub_menu_list a:hover {
+    background-color: #eee;
+    color: black;
+}
+.sub_menu:hover .sub_menu_list {
+    display: block;
+}
+
+
+/*검색창
+.search_area td{
+    display: inline;
+    width: 200px;
+    text-align: center;
+}
+.search_area{
+    position: relative;
+    top: 40px;
+    float: right;
+    margin-right: 30px;
+    height: 32px;
+    width: 200px;
+    border: 2px solid rgb(126, 126, 139);
+    background: white;
+}*/
+/*검색창 설정
+#search_input{
+    font-family: 'Gamja Flower', cursive;
+    font-size: 24px;
+    width : 150px;
+    height: 30px;
+    border: 0px;
+    outline: none;
+    margin-left: 5px;
+}*/
+/*검색창 버튼 설정
+#search_button{
+    font-size: 20px;
+    width: 35px;
+    height: 100%;
+    border : 0px;
+    outline: none;
+    background: rgb(126, 126, 139);
+    color: white;
+    float: right;
+    cursor: pointer;
+    padding-top: 4px;
+}*/
+
+/*이미지 영역*/
+#img_area{
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: -9999px;
+    display: block;
+    height: 500px; 
+}
+/*배너 이미지*/
+#banner{
+    width: 100%;
+    height: 500px;
+    min-width: 1120px;
+    object-fit:cover;
+
+}
+/*이전 이미지, 다음 이미지 버튼*/
+button.change_img{
+    margin-right: 5px;
+    position: relative;
+    top: -50px;
+    left: 50%;
+    border: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255); 
+}
+/*이전 이미지, 다음 이미지 버튼에 커서를 올리면*/
+button.change_img:hover{
+    color: rgb(192, 161, 136);
+}
+
+#main_contents{
+    min-width: 1120px;
+    text-align: center;
+}
+#main_contents h2{
+    font-weight: normal;
+    padding:55px 0 105px;
+    font-size:40px;
+}
+
+#main_contents img{
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+}
+
+/* about_area */
+
+.ranking_box {background:#f4f0e9;}
+ .top_ranking li {
+     float:left; 
+     width:32%; 
+     margin-left:2%; 
+     text-align:center; 
+     position:relative; 
+     top:-50px;
+     list-style: none;
+}
+.top_ranking li:first-child {margin-left:0;}
+.top_ranking li img {width:100%;}
+.top_ranking li h3 {
+    font-weight:bold; 
+    font-size:18px; 
+    padding-top:25px; 
+    color:#000;  
+}
+.top_ranking li p {
+    box-sizing:border-box; 
+    padding:10px 30px 0; 
+    width:100%; 
+    overflow:hidden; 
+    word-break:keep-all; 
+    line-height:1.8; 
+    color:#666;
+}
+
+
+
+/* quick_list */
+.quick_area {
+    position:fixed; 
+    top:300px; 
+    right:0; 
+    width:130px;     
+    z-index:100;
+}
+.quick_area .quick_list {
+    list-style: none;
+}
+.quick_area .quick_list li {
+    text-align:center; 
+    background:#282828; 
+    font-size:13px;    
+}
+.quick_area .quick_list li a {
+    display:block; 
+    padding: 20px 10px; 
+    border-top:1px solid #4d4d4d;
+    text-decoration: none;
+}
+.quick_area .quick_list li:first-child a {
+    border-top:none;
+}
+.quick_area .quick_list li a h3 {
+    color:#ddd; 
+}
+.quick_area .quick_list li:last-child a{
+    background: #ddd;
+    padding: 5px 0; 
+}
+.quick_area .quick_list li:last-child a h3{
+    font-weight: bold;
+    font-size: 15px;
+    color: #282828;
+  
+}
+.quick_area .quick_list li a p {
+    font-size:12px; 
+    color:#fff;
+}
+
+
+
+
+
+

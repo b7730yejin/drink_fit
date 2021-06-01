@@ -1,4 +1,4 @@
-<!--카페 홈 메인 창-->
+<!--맞춤 커피 창-->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drink Fit</title>
     <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/custom.css">
     <!--<link rel="stylesheet" href="CSS/menu.css">-->
 
     <!--구글 폰트, 아이콘 적용-->
@@ -30,7 +31,8 @@
                 <td>
                     <div class="title_area">
                         <a href="index.html">
-                            <img alt="타이틀 이미지" src="https://github.com/b7730yejin/imagesource/blob/main/DrinkFit/DrinkFit_logo.png?raw=true">
+                            <img alt="타이틀 이미지"
+                                src="https://github.com/b7730yejin/imagesource/blob/main/DrinkFit/DrinkFit_logo.png?raw=true">
                         </a>
                     </div>
                 </td>
@@ -81,26 +83,19 @@
     </div>
 
     <!--본문-->
-    <main id="main_contents">
-        <h2>6월의 인기 음료 <strong>TOP 3</strong></h2>
-        <div class="ranking_box">
-            <ul class="top_ranking">
-                <li>
-                    <img src="https://github.com/b7730yejin/imagesource/blob/main/DrinkFit/americano.jpg?raw=true" alt="TOP3(1)" />
-                    <h3>아메리카노</h3>
-                    <p>맛있는 아메리카노</p>
-                </li>
-                <li>
-                    <img src="https://github.com/b7730yejin/imagesource/blob/main/DrinkFit/ratte.jpg?raw=true" alt="TOP3(2)" />
-                    <h3>카페라테</h3>
-                    <p>부드러운 카페라테</p>
-                </li>
-                <li>
-                    <img src="https://github.com/b7730yejin/imagesource/blob/main/DrinkFit/caramel.jpg?raw=true" alt="TOP3(3)" />
-                    <h3>카라멜마키아토</h3>
-                    <p>달콤한 카라멜마키아토</p>
-                </li>
+    <main class="custom_coffee">
+        <div class="menu_list">
+            <h1>음료 검색</h1>
+            <hr>
+            <ul>
+                <li>맞춤 원두</li>
+                <li>맞춤 티</li>
             </ul>
+        </div>
+        <div class="contents">
+            <h2>맞춤 원두 찾기</h2>
+            <p>Custom range slider:</p>
+            <input type="range" min="0" max="5" value="50" class="slider" id="myRange">
         </div>
     </main>
 
@@ -115,17 +110,22 @@
         <ul class="quick_list">
             <li><a href="javascript:;">
                     <h3>공지사항</h3>
-                </a></li>
+                </a>
+            </li>
             <li><a href="tel:010-3226-8183">
                     <h3>전화 상담</h3>
-                </a></li>
+                </a>
+            </li>
             <li><a href="javascript:;">
                     <h3 class="to_contact">카카오톡 상담</h3>
-                </a></li>
+                </a>
+            </li>
             <li><a href="#top">
                     <h3>TOP</h3>
-                </a></li>
+                </a>
+            </li>
         </ul>
     </div>
 </body>
+
 </html>

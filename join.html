@@ -1,4 +1,4 @@
-<!--카페 홈 메인 창-->
+<!--회원가입 창-->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drink Fit</title>
+    <title>Better Coffee 회원가입</title>
+    <link rel="stylesheet" href="CSS/join.css">
     <link rel="stylesheet" href="CSS/index.css">
-    <!--<link rel="stylesheet" href="CSS/menu.css">-->
 
     <!--구글 폰트, 아이콘 적용-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,10 +16,10 @@
         href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <script type="text/javascript" src="JS/index.js"></script>
+<script type="text/javascript" src="JS/checkInfo.js"></script>
 
 <body>
     <!--페이지 헤더-->
@@ -30,7 +30,8 @@
                 <td>
                     <div class="title_area">
                         <a href="index.html">
-                            <img alt="타이틀 이미지" src="https://github.com/b7730yejin/imagesource/blob/main/DrinkFit/DrinkFit_logo.png?raw=true">
+                            <img alt="타이틀 이미지"
+                                src="https://github.com/b7730yejin/imagesource/blob/main/DrinkFit/DrinkFit_logo.png?raw=true">
                         </a>
                     </div>
                 </td>
@@ -80,52 +81,84 @@
         <button class="change_img" onclick="goBack();"><span class="material-icons">&#xe5cc;</span></button>
     </div>
 
-    <!--본문-->
-    <main id="main_contents">
-        <h2>6월의 인기 음료 <strong>TOP 3</strong></h2>
-        <div class="ranking_box">
-            <ul class="top_ranking">
-                <li>
-                    <img src="https://github.com/b7730yejin/imagesource/blob/main/DrinkFit/americano.jpg?raw=true" alt="TOP3(1)" />
-                    <h3>아메리카노</h3>
-                    <p>맛있는 아메리카노</p>
-                </li>
-                <li>
-                    <img src="https://github.com/b7730yejin/imagesource/blob/main/DrinkFit/ratte.jpg?raw=true" alt="TOP3(2)" />
-                    <h3>카페라테</h3>
-                    <p>부드러운 카페라테</p>
-                </li>
-                <li>
-                    <img src="https://github.com/b7730yejin/imagesource/blob/main/DrinkFit/caramel.jpg?raw=true" alt="TOP3(3)" />
-                    <h3>카라멜마키아토</h3>
-                    <p>달콤한 카라멜마키아토</p>
-                </li>
-            </ul>
-        </div>
-    </main>
 
+    <!--정보 입력 영역-->
+    <main class="join_area">
+        <form>
+            <fieldset>
+                <legend>정보 입력</legend>
+                <ul>
+                    <li>
+                        <label for="userId">아이디</label>
+                        <input type="text" name="userId" id="userId" placeholder="6~20자 영문 + 숫자" minlength="6"
+                            maxlength="20" autofocus required>
+                    </li>
+                    <li>
+                        <label for="userPwd">비밀번호</label>
+                        <input type="password" name="userPwd" id="userPwd" placeholder="8~15자 영문 + 숫자 + 특수문자"
+                            minlength="8" maxlength="15" required>
+                    </li>
+                    <li>
+                        <label for="userPwd_ck">비밀번호 확인</label>
+                        <input type="password" name="userPwd_ck" id="userPwd_ck" minlength="8" maxlength="12" required>
+                    </li>
+                    <li>
+                        <label for="userEmail">이메일</label>
+                        <input type="email" name="userEmail" id="userEmail" required>
+                        <select name="domain" id="domain" onchange="domainSelect();">
+                            <option value="0" selected>직접입력</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="duam.net">duam.net</option>
+                            <option value="hanmail.net">hanmail.net</option>
+                            <option value="gmail.com">gmail.com</option>
+                            <option value="nate.com">nate.com</option>
+                            <option value="yahoo.com">yahoo.com</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="telNum">휴대폰</label>
+                        <input type="tel" name="telNum" id="telNum" placeholder="010 1234 5678" pattern="[0-9]+">
+                    </li>
+                    <div class="wrap">
+            
+                            <label>개인정보 유효기간 : </label>
+                            <input type="radio" id="validity" name="validity" value="1">1년
+                            <input type="radio" id="validity" name="validity" value="2" checked>탈퇴 시까지<br>
+                        
+                       
+                            <input type="checkbox" name="chk" id="chk" value="1">이메일로 이벤트 정보를 받겠습니다.(선택)
+                        
+                        <button type="button" onclick="joinsumit();">가입 완료</button>
+                    </div>
+                </ul>
+            </fieldset>
+        </form>
+    </main>
     <!--footer-->
     <footer>
         <hr>
         <p class="copyBox">copyright &copy; 2021 BYJ</p>
     </footer>
 
-    <!--퀵 메뉴-->
     <div class="quick_area">
         <ul class="quick_list">
             <li><a href="javascript:;">
                     <h3>공지사항</h3>
-                </a></li>
+                </a>
+            </li>
             <li><a href="tel:010-3226-8183">
                     <h3>전화 상담</h3>
-                </a></li>
+                </a>
+            </li>
             <li><a href="javascript:;">
                     <h3 class="to_contact">카카오톡 상담</h3>
                 </a></li>
             <li><a href="#top">
                     <h3>TOP</h3>
-                </a></li>
+                </a>
+            </li>
         </ul>
     </div>
 </body>
+
 </html>

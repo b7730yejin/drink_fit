@@ -34,39 +34,13 @@ body {
     color: white;
 }
 
-.menu_list h1 {
-    font-size: 25px;
-    margin: 10px 20px;
-}
+.menu_list h1 {font-size: 22px;margin: 10px 20px; font-weight: bold;}
+.menu_list hr {margin: 0; border: 1px solid white;}
+.menu_list ul {list-style: none; margin: 0 20px;}
+.menu_list li { margin: 10px 0;}
+.menu_list a {text-decoration: none; color: white;}
+.menu_list a:link { color: white;}
+.menu_list a:visited {color: white;}
+.menu_list a:hover { color: rgb(184, 184, 184); font-size: 20px;}
 
-.menu_list hr {
-    font-size: 22px;
-    margin: 0;
-}
-
-.menu_list ul {
-    list-style: none;
-    margin: 0 20px;
-}
-
-.menu_list li {
-    margin: 10px 0;
-}
-
-.menu_list a {
-    text-decoration: none;
-    color: white;
-}
-
-.menu_list a:link {
-    color: white;
-}
-
-.menu_list a:visited {
-    color: white;
-}
-
-.menu_list a:hover {
-    color: rgb(184, 184, 184);
-    font-size: 20px;
-}
+.container h2{margin-top: 40px; font-weight: bold;}

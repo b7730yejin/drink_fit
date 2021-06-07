@@ -1,7 +1,7 @@
 button{cursor: pointer;}
 .custom_coffee{
     display: grid;
-    height: 800px;
+    height: 900px;
     grid-template-columns: 15% 85%;
     grid-template-areas: "list contents";
     min-width: 1120px; 
@@ -12,6 +12,7 @@ button{cursor: pointer;}
 /*aside 메뉴리스트 설정*/
 .menu_list{ grid-area: "list"; text-align: right; background-color: rgba(0, 0, 0, 0.603);; color: white;}
 .menu_list h1{font-size: 22px; margin: 10px 20px;}
+.menu_list hr {margin: 0; border: 1px solid white;}
 .menu_list ul{list-style: none; margin: 0 20px;}
 .menu_list li{margin: 10px 0;}
 .menu_list a{text-decoration: none; color: white;}
@@ -23,8 +24,8 @@ button{cursor: pointer;}
 }
 
 
-.contents{grid-area: "contents"; margin: 70px auto; background: white; padding: 0 30px; height: 650px;}
-.contents h2{text-align: center; margin: 50px auto;}
+.contents{grid-area: "contents"; margin: 70px auto; background: white; padding: 0 30px; height: 700px;}
+.contents h2{text-align: center; margin: 40px auto;}
 .contents ul{margin: 0; padding: 0;list-style: none;}
 .contents li{  margin: 10px auto 0 auto; text-align: center;}
 #origin {text-align: left; margin-left: 15px; margin-top: 18px;}
@@ -84,7 +85,9 @@ button{cursor: pointer;}
 #acidityRange{
     margin-left: 10px;
 }
-#keyWord_input{width: 190px; height: 25px; font-size: 15px;}
+#keyWord_input{ width: 190px; height: 30px; font-size: 15px; border: 1px solid rgb(199, 199, 199); border-radius: 5px;}
+#keyWord_input::placeholder{font-size: 14px; padding: auto;}
+#keyWord li{ width: fit-content;}   
 
 #add_btn{
     border: 0;
@@ -117,7 +120,13 @@ button{cursor: pointer;}
     cursor: pointer;
     font-size: 15px;
 }
-#keyWord li{ width: fit-content;}   
+#keyWord{
+    margin-top: 10px;
+    height: 100px;
+    overflow:auto;
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 5px;
+}
 .keyWord_btn button:active{background-color: blue; border-radius: 100px;}
 
 #add_keyword{
@@ -137,4 +146,3 @@ button{cursor: pointer;}
 }
 #origin label{margin-left: 20px;}
 #origin label:first-child{margin-left: 0;}
-

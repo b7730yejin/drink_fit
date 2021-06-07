@@ -103,7 +103,6 @@ function checkEmail(email) {
 }
 function checkTell(tel) {
   const NUM_CHECK = /[0-9]+$/;
-
   if (!NUM_CHECK.test(tel)) {
     return false;
   } else {

@@ -1,0 +1,140 @@
+button{cursor: pointer;}
+.custom_coffee{
+    display: grid;
+    height: 800px;
+    grid-template-columns: 15% 85%;
+    grid-template-areas: "list contents";
+    min-width: 1120px; 
+    background: #f3f3f3;
+    color: #616f80;
+}
+
+/*aside 메뉴리스트 설정*/
+.menu_list{ grid-area: "list"; text-align: right; background-color: rgba(0, 0, 0, 0.603);; color: white;}
+.menu_list h1{font-size: 22px; margin: 10px 20px;}
+.menu_list ul{list-style: none; margin: 0 20px;}
+.menu_list li{margin: 10px 0;}
+.menu_list a{text-decoration: none; color: white;}
+.menu_list a:link{color: white;}
+.menu_list a:visited{color: white;}
+.menu_list a:hover {
+    color: rgb(184, 184, 184);
+    font-size: 20px;
+}
+
+
+.contents{grid-area: "contents"; margin: 70px auto; background: white; padding: 0 30px; height: 650px;}
+.contents h2{text-align: center; margin: 50px auto;}
+.contents ul{margin: 0; padding: 0;list-style: none;}
+.contents li{  margin: 10px auto 0 auto; text-align: center;}
+#origin {text-align: left; margin-left: 15px; margin-top: 18px;}
+.contents label{font-weight: bold; font-size: 18px;}
+.contents input{margin-left: 10px;}
+.contents select{
+    height: 30px;
+    padding: 5px 0;
+    margin-left: 10px;
+    width: 120px;
+    font-size: 16px;
+}
+.cafein_select {
+    text-align: center;
+    background-color: orange;
+    padding: 10px 0;
+    color: white;
+    font-size: 18px;
+}
+.contents .slider {
+    margin-left: 30px;
+    -webkit-appearance: none;
+    width: 300px;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+#body_slider {
+    margin-left: 10px;
+    -webkit-appearance: none;
+    width: 300px;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.range_num{
+    width: 330px;
+    text-align: center;
+    margin-left: 70px;
+}
+.slider:hover {opacity: 1;}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 25px;
+    background: orange;
+    cursor: pointer;
+}
+#acidityRange{
+    margin-left: 10px;
+}
+#keyWord_input{width: 190px; height: 25px; font-size: 15px;}
+
+#add_btn{
+    border: 0;
+    height: 25px;
+    position: relative;
+    top: 5px;
+    width: 25px;
+    border-radius: 50px;
+    background-color: gray;
+    color: white;
+}
+#delect_btn{
+    border: 0;
+    height: 25px;
+    width: 25px;
+    position: relative;
+    top: 5px;
+    border-radius: 50px;
+    background-color: gray;
+    color: white;
+}
+.keyWord_btn button{
+    border: 0;
+    width: 80px;
+    height: 30px;
+    background-color: orange;
+    border-radius: 100px;
+    margin: 20px 0 10px 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+#keyWord li{ width: fit-content;}   
+.keyWord_btn button:active{background-color: blue; border-radius: 100px;}
+
+#add_keyword{
+    width: 30px;
+    background-color: rgb(146, 146, 146);
+    color: white;
+    font-size: 18px;
+}
+#search_btn{
+    border: 0;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    background-color: orange;
+    color: white;
+    font-size: 17px;
+}
+#origin label{margin-left: 20px;}
+#origin label:first-child{margin-left: 0;}
+

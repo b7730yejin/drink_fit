@@ -57,6 +57,7 @@ time, mark, audio, video {
 }
 
 body {overflow-x: visible; }
+button, a{cursor: pointer;}
  /*헤더 영역*/
 header{
     width: 100%;
@@ -67,14 +68,8 @@ header{
     background-color: rgba(0, 0, 0, 0.603);
     z-index: 9999;
 }
-header table{
-    position: relative;
-    width: 100%;
-    
-}
-header table td:first-child{
-    width: 300px;
-}
+header table{position: relative; width: 100%;}
+header table td:first-child{width: 300px;}
 
 /*타이틀 이미지 설정*/
 .title_area img{
@@ -84,9 +79,7 @@ header table td:first-child{
     margin: 10px 0;
     object-fit: contain;
 }
-.login_area {
-    height: 100px;
-}
+.login_area {height: 100px;}
 
 /*로그인&회원가입 하이퍼링크 설정*/
 .login_area a{
@@ -100,25 +93,12 @@ header table td:first-child{
     padding: 0 20px;
     color: aliceblue;
 }
-.login_area a:last-child{
-    border-right: 2px solid aliceblue;
-}
-.login_area a:link{
-    color: aliceblue;
-}
-.login_area a:visited{
-    color: aliceblue;
-}
-.login_area a:hover{
-    color: rgb(192, 161, 136);
-}
+.login_area a:last-child{border-right: 2px solid aliceblue;}
+.login_area a:link, .login_area a:visited{color: aliceblue;}
+.login_area a:hover{ color: rgb(192, 161, 136);}
 
 /*상단 메뉴 설정*/
-.menu_area {
-    overflow: hidden;
-    margin-top: 93px;
-    padding: 0 auto; 
-  }
+.menu_area {overflow: hidden; margin-top: 93px; padding: 0 auto; }
 .menu_area a {
     font-size: 16px;
     color: white;
@@ -126,10 +106,7 @@ header table td:first-child{
     padding: 14px 16px;
     text-decoration: none;
 }
-.sub_menu {
-    float: right;
-    overflow: hidden;
-}
+.sub_menu {float: right; overflow: hidden;}
 .sub_menu .sub_btn {
     font-size: 18px;  
     border: none;
@@ -139,9 +116,7 @@ header table td:first-child{
     background-color: inherit;
     margin: 0 ;
 }
-.menu_area a:hover, .sub_menu:hover .sub_btn {
-    background-color: red;
-}
+.menu_area a:hover, .sub_menu:hover .sub_btn {background-color: red;}
 .sub_menu_list {
     display: none;
     position: absolute;
@@ -150,20 +125,9 @@ header table td:first-child{
     width: 100%;
     z-index: 1;
 }
-.sub_menu_list a {
-    float: left;
-    color: white;
-    text-decoration: none;
-}
-.sub_menu_list a:hover {
-    background-color: #eee;
-    color: black;
-}
-.sub_menu:hover .sub_menu_list {
-    display: block;
-}
-
-
+.sub_menu_list a {float: left; color: white; text-decoration: none;}
+.sub_menu_list a:hover {background-color: #eee; color: black;}
+.sub_menu:hover .sub_menu_list {display: block;}
 
 
 /*이미지 영역*/
@@ -171,7 +135,6 @@ header table td:first-child{
     position: relative;
     top: 0;
     width: 100%;
-    z-index: -9999px;
     display: block;
     height: 500px; 
 }
@@ -181,43 +144,34 @@ header table td:first-child{
     height: 500px;
     min-width: 1120px;
     object-fit:cover;
-
 }
+
+.change_img{text-align: center;}
 /*이전 이미지, 다음 이미지 버튼*/
-button.change_img{
-    margin-right: 5px;
+.change_img button{
     position: relative;
     top: -50px;
-    left: 50%;
     border: 0;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
     color: rgb(255, 255, 255); 
 }
-/*이전 이미지, 다음 이미지 버튼에 커서를 올리면*/
-button.change_img:hover{
-    color: rgb(192, 161, 136);
-}
+button.change_img:hover{color: rgb(192, 161, 136);}
 
-#main_contents{
-    min-width: 1120px;
-    text-align: center;
-}
+#main_contents{min-width: 1120px; text-align: center; background: #f3f3f3;}
 #main_contents h2{
     font-weight: normal;
-    padding:55px 0 105px;
+    padding: 55px 0  75px 0;
+    margin-bottom: 90px;
     font-size:40px;
 }
-
 #main_contents img{
     width: 200px;
     height: 300px;
     object-fit: contain;
 }
 
-/* about_area */
-
-.ranking_box {background:#f4f0e9;}
+/*랭킹영역*/
  .top_ranking li {
      float:left; 
      width:32%; 
@@ -245,52 +199,46 @@ button.change_img:hover{
     color:#666;
 }
 
-
-
-/* quick_list */
+/* quick 메뉴 */
 .quick_area {
     position:fixed; 
     top:300px; 
-    right:0; 
-    width:130px;     
+    right: -130px; 
     z-index:100;
 }
-.quick_area .quick_list {
-    list-style: none;
+.quick_area table, td{ border-collapse: collapse;}
+.quick_area td{
+    width: 130px;
+    height: 50px;
+    text-align: center;
+    background-color: #000;
+    color: white;
+    border-bottom: 1px solid rgb(156, 156, 156);
 }
-.quick_area .quick_list li {
-    text-align:center; 
-    background:#282828; 
-    font-size:13px;    
-}
-.quick_area .quick_list li a {
-    display:block; 
-    padding: 20px 10px; 
-    border-top:1px solid #4d4d4d;
+.quick_area a{
+    color: white;
     text-decoration: none;
+    font-size: 18px;
 }
-.quick_area .quick_list li:first-child a {
-    border-top:none;
-}
-.quick_area .quick_list li a h3 {
-    color:#ddd; 
-}
-.quick_area .quick_list li:last-child a{
-    background: #ddd;
-    padding: 5px 0; 
-}
-.quick_area .quick_list li:last-child a h3{
+#go_top{
+    height: 40px;
+    background-color: rgb(179, 179, 179);
+    border: 0;
     font-weight: bold;
-    font-size: 15px;
-    color: #282828;
-  
 }
-.quick_area .quick_list li a p {
-    font-size:12px; 
-    color:#fff;
+#open_btn{ background-color: rgba(255, 255, 255, 0); border: 0;}
+#open_btn button{
+    position: relative;
+    padding: 5px 5px;
+    top: -79px;
+    right: -47px;
+    width: 35px;
+    height: 35px;
+    border: 0;
+    outline: none;
+    background-color: rgb(179, 179, 179);
+    color: white;
 }
-
-
 
 
 

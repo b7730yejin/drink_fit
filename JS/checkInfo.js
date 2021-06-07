@@ -1,4 +1,5 @@
-function joinsumit() {
+function checkInfo() {
+  
   if (userId.value == "") {
     alert("아이디를 입력하세요");
     userId.focus();
@@ -50,35 +51,34 @@ function joinsumit() {
       return false;
     }
   }
-
   if (telNum.value == "") {
     alert("휴대폰을 입력하세요");
     telNum.focus();
     return false;
   } else {
     if (!checkTell(telNum.value)) {
-      alert("유효하지 않은 휴대폰 번호입니다.()");
+      alert("유효하지 않은 휴대폰 번호입니다.");
       telNum.focus();
       return false;
     }
   }
 
-  alert("가입완료");
+  alert("검사 OK");
 }
 
 function checkId(id) {
-  const idCheck = /^(?=.*[a-zA-Z])(?=.*[0-9]).{6,20}$/;
+  const ID_CHECK = /^(?=.*[a-zA-Z])(?=.*[0-9]).{6,20}$/;
 
-  if (!idCheck.test(id)) {
+  if (!ID_CHECK.test(id)) {
     return false;
   } else {
     return true;
   }
 }
 function checkPwd(pwd) {
-  const pwdCheck = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*+=-]).{8,15}$/;
+  const PWD_CHECK = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*+=-]).{8,15}$/;
 
-  if (!pwdCheck.test(pwd)) {
+  if (!PWD_CHECK.test(pwd)) {
     return false;
   } else {
     return true;
@@ -93,18 +93,18 @@ function checkPwdCk(pwd_ck) {
 }
 
 function checkEmail(email) {
-  const emailCheck =
+  const EMAIL_CHECK =
     /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
-  if (!emailCheck.test(email)) {
+  if (!EMAIL_CHECK.test(email)) {
     return false;
   } else {
     return true;
   }
 }
 function checkTell(tel) {
-  const numCheck = /^[0-9]/g;
+  const NUM_CHECK = /[0-9]+$/;
 
-  if (!numCheck.test(tel)) {
+  if (!NUM_CHECK.test(tel)) {
     return false;
   } else {
     return true;

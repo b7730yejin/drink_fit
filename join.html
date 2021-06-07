@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Better Coffee 회원가입</title>
+    <title>DRINKFIT 회원가입</title>
     <link rel="stylesheet" href="CSS/join.css">
     <link rel="stylesheet" href="CSS/index.css">
 
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="JS/index.js"></script>
 <script type="text/javascript" src="JS/checkInfo.js"></script>
 
@@ -36,7 +37,7 @@
                     </div>
                 </td>
                 <td>
-                    <div class="menu_area">
+                    <nav class="menu_area">
                         <div class="sub_menu">
                             <button class="sub_btn">MY페이지<i class="fa fa-caret-down"></i></button>
                             <div class="sub_menu_list">
@@ -56,14 +57,14 @@
                         <div class="sub_menu">
                             <button class="sub_btn">음료 검색<i class="fa fa-caret-down"></i></button>
                             <div class="sub_menu_list">
-                                <a href="#">맞춤 원두</a>
-                                <a href="#">맞춤 티</a>
+                                <a href="customCoffee.html">맞춤 원두</a>
+                                <a href="customTae.html">맞춤 티</a>
                             </div>
                         </div>
                         <div class="sub_menu">
                             <button class="sub_btn">DRINK FIT 소개</button>
                         </div>
-                    </div>
+                    </nav>
                 <td>
                     <div class="login_area">
                         <a href="join.html">회원가입</a>
@@ -77,8 +78,12 @@
     <!--이미지 영역 : 배너 이미지-->
     <div id="img_area">
         <img id="banner" src="https://github.com/b7730yejin/imagesource/blob/main/coffee2.jpg?raw=true" alt="메인홈 배너">
-        <button class="change_img" onclick="goFront();"><span class="material-icons">&#xe5cb;</span></button>
-        <button class="change_img" onclick="goBack();"><span class="material-icons">&#xe5cc;</span></button>
+        <div class="change_img">
+            <button onclick="goFront();"><span class="material-icons">&#xe5cb;</span></button>
+            <button  onclick="goBack();"><span class="material-icons">&#xe5cc;</span></button>
+        </div>
+
+       <div class="text">DRINK FIT 회원가입</div>
     </div>
 
 
@@ -120,45 +125,42 @@
                         <input type="tel" name="telNum" id="telNum" placeholder="010 1234 5678" pattern="[0-9]+">
                     </li>
                     <div class="wrap">
-            
                             <label>개인정보 유효기간 : </label>
                             <input type="radio" id="validity" name="validity" value="1">1년
                             <input type="radio" id="validity" name="validity" value="2" checked>탈퇴 시까지<br>
                         
-                       
-                            <input type="checkbox" name="chk" id="chk" value="1">이메일로 이벤트 정보를 받겠습니다.(선택)
-                        
-                        <button type="button" onclick="joinsumit();">가입 완료</button>
+                            <input type="checkbox" name="chk" id="chk" value="1">이메일로 이벤트 정보를 받겠습니다.(선택)<br>
+                        <button type="button" onclick="checkInfo();">가입 완료</button>
                     </div>
                 </ul>
             </fieldset>
         </form>
     </main>
-    <!--footer-->
-    <footer>
-        <hr>
-        <p class="copyBox">copyright &copy; 2021 BYJ</p>
-    </footer>
+    
+   <!--퀵 메뉴-->
+   <div class="quick_area">
+    <table>
+        <tr>
+            <td rowspan='4' id="open_btn"><button type="button" id="open_quick"><span class="material-icons">&#xe2ea;</span></button></td>
+            <td><a href='#'>공지사항</a></td>
+        </tr>
+        <tr>
+            <td><a href='#'>에러 신고</a></td>
+        </tr>
+        <tr>
+            <td><a href='#'>전화상담</a></td>
+        </tr>
+        <tr>     
+            <td id="go_top"><a href="#top">TOP</a></td>
+        </tr>
+    </table>
+</div>
 
-    <div class="quick_area">
-        <ul class="quick_list">
-            <li><a href="javascript:;">
-                    <h3>공지사항</h3>
-                </a>
-            </li>
-            <li><a href="tel:010-3226-8183">
-                    <h3>전화 상담</h3>
-                </a>
-            </li>
-            <li><a href="javascript:;">
-                    <h3 class="to_contact">카카오톡 상담</h3>
-                </a></li>
-            <li><a href="#top">
-                    <h3>TOP</h3>
-                </a>
-            </li>
-        </ul>
-    </div>
+ <!--footer-->
+ <footer>
+    <hr>
+    <p class="copyBox">copyright &copy; 2021 BYJ</p>   
+</footer>
 </body>
 
 </html>

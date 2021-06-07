@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.83.1">
-  <title>Signin Template · Bootstrap v5.0</title>
+  <title>DRINKFIT 로그인</title>
   <link rel="stylesheet" href="CSS/login.css">
 
   <!-- Bootstrap core CSS -->
@@ -16,14 +16,22 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
-  <script src="jquery-3.6.0.min.js"></script>
-
+  
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  //아이디 비밀번호 찾기 팝업창 열기
+  function openFind() {
+    let url = 'findId.html';
+    let name = 'findIdOpen';
+    let option = "width=500, height=500, left=500, top=250";
+    window.open(url, name, option);
+  }
+</script>
 
 <body class="text-center">
   <main class="login_form">
     <form>
-      
       <img class="logo" src="https://github.com/b7730yejin/imagesource/blob/main/DrinkFit/DrinkFit_logo2.png?raw=true" alt="DRINKFIT 로고 검정">
       <h1>로그인</h1>
 
@@ -37,15 +45,14 @@
       </div>
 
       <div class="checkbox mb-2">
-        <label>
-          <input type="checkbox" value="remember-me"> 아이디 저장
-        </label>
+        <label><input type="checkbox" value="remember-me"> 아이디 저장</label>
       </div>
       <button type="submit">로그인</button>
-      <a class="findId" href="#">아이디/비밀번호 찾기</a>
+      <a href="#" onclick="openFind()">아이디/비밀번호 찾기</a>
       <p class="mt-5 mb-3 text-muted">&copy; 2021 BYH</p>
     </form>
   </main>
 </body>
+
 
 </html>

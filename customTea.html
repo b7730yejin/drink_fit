@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drink Fit</title>
     <link rel="stylesheet" href="CSS/index.css">
-    <link rel="stylesheet" href="CSS/custom_c.css">
+    <link rel="stylesheet" href="CSS/custom_t.css">
     <!--<link rel="stylesheet" href="CSS/menu.css">-->
 
     <!--구글 폰트, 아이콘 적용-->
@@ -99,7 +99,7 @@
         </aside>
         <!--메인글-->
         <article class="contents">
-            <h2>맞춤 원두 찾기</h2>
+            <h2>맞춤 티 찾기</h2>
             <form>
                 <ul>
                     <li class="selected">
@@ -115,33 +115,20 @@
                         </div>
                     </li>
                     <li id="origin">
-                        <label for="sugerRange">원산지</label>
-                        <select name="sugerRange">
+                        <label for="kinds">종류</label>
+                        <select name="kinds">
                             <option selected>무관</option>
-                            <optgroup label="동남아시아">
-                                <option>베트남</option>
-                                <option>필리핀</option>
-                                <option>태국</option>
-                                <option>대만</option>
-                                <option>인도네시아</option>
-                            </optgroup>
-                            <optgroup label="중남미">
-                                <option>브라질</option>
-                                <option>멕시코</option>
-                                <option>콜롬비아</option>
-                                <option>볼리비아</option>
-                                <option>페루</option>
-                            </optgroup>
-                            <optgroup label="유럽">
-                                <option>영국</option>
-                                <option>독일</option>
-                                <option>네덜란드</option>
-                            </optgroup>
-                            <optgroup label="아프리카">
-                                <option>에티오피아</option>
-                                <option>케냐</option>
-                                <option>콩고</option>
-                            </optgroup>
+                            <option>발효차</option>
+                            <option>대용차</option>
+                            <option>허브차</option>
+                        </select>
+                        <label for="formulation">제형</label>
+                        <select name="formulation">
+                            <option selected>무관</option>
+                            <option>엽차</option>
+                            <option>티백</option>
+                            <option>말차</option>
+                            <option>병차</option>
                         </select>
                     </li>
                     <li>
@@ -181,41 +168,23 @@
                                 <td>5</td>
                             </tr>
                         </table>
-                        <label for="acidityRange">산미</label>
+                        <label for="acidityRange">산화도</label>
                         <input type="range" min="1" max="5" value="5" class="slider" name="acidityRange"
                             id="acidityRange">
                     </li>
-                    <li class="range">
-                        <table class="range_num">
-                            <tr>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                            </tr>
-                        </table>
-                        <label for="body_slider">바디감</label>
-                        <input type="range" min="1" max="5" value="5" class="slider" name="body_slider"
-                            id="body_slider">
-                    </li>
-                  
                     <li>
                         <label for="keyWord_input">기타 키워드</label>
                         <input type="text" name="keyWord_input" id="keyWord_input" placeholder="최대 5개 키워드 입력 가능">
-                        <button type="button" id="add_btn" onclick="open_addPage()"><span
-                                class="material-icons">&#xe145;</span></button>
-
-                        <button type="button" id="delect_btn" onclick="input_rest()"><span
-                                class="material-icons">&#xe15b;</span></button>
-
+                        <button type="button" id="add_btn" onclick="open_addPage()"><span class="material-icons">&#xe145;</span></button>
+                        <button type="button" id="delect_btn" onclick="input_rest()"><span class="material-icons">&#xe15b;</span></button>
                         <br>
                         <div id="keyWord">
                             <ol>
-                            </ol>
+                            </ol> 
                         </div>
                     </li>
                 </ul>
+
                 <button type="button" id="search_btn">검색</button>
             </form>
         </article>
@@ -246,7 +215,7 @@
         <hr>
         <p class="copyBox">copyright &copy; 2021 BYJ</p>
     </footer>
-
+</body>
 </body>
 
 </html>
